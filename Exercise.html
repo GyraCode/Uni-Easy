@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" 
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./ken.css">
+   
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- 電腦版Header -->
+
+    <div class="headerTop d-none d-md-block">
+        <div class="navbg ">
+            <img src="/png/navbar_bg_01.png" alt="">
+        </div>
+        <div class="container navbar-adjust">
+            <div class=" row d-flex justify-content-between">
+                <div class="logo">
+                    <a href="#">
+                        <img src="/png/logo_35.png" alt="">
+                    </a>
+                </div>
+                <div class="btn ">
+                    <a href="#" class="btn btn-danger"  data-toggle="modal" data-target="#registerModal">免費體驗 Free</a>
+                    <a href="#" class="btn btn-danger"  data-toggle="modal" data-target="#loginModal" >Login 登入</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+<!-- kenadd -->
+
+<!-- Modal註冊 -->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">註冊</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          </div>
+        
+        <!-- 註冊表格 -->
+        <div class="modal-body">
+            <form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email/信箱</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Password/密碼</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress">Address1/地址1</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress2">Address 2/地址2</label>
+                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputCity">City/城市</label>
+                    <input type="text" class="form-control" id="inputCity">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputState">State</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                      Check me out
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign in</button>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Modal登入 -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">登入</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group row">
+                  <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                  <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                  <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                  </div>
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+          <button type="button" class="btn btn-primary">登入</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+    <!-- 手機板Header -->
+    <div class="headerMobile d-lg-none">
+
+      <div class="PJmobile">
+          <div class="boxMobile">&nbsp</div>
+          <div class="container">
+
+              <div class="navMobile row justify-content-around">
+
+                  <div class="iconMobile">
+                      <a href="">
+                          <img src="/png/outline_menu_black_24dp.png" alt="">
+                      </a>
+                  </div>
+                  <div class="logoMobile">
+                      <a href="">
+                          <img src="/png/logo_text.gif" alt="">
+                      </a>
+                  </div>
+                  <div class="srarchMobile">
+                      <a href="">
+                          <img src="/png/outline_search_black_24dp.png" alt="">
+                      </a>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <div class="container ">
+     <!-- 有氧減重 -->
+     <section>
+       <div class="container my-5 bg-danger" >
+        <hr>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="py-5 mb-6">
+                <h2 class="display-6 text-center">有氧減重系列</h2>
+            </div>
+          <div class="display-6 text-center text-md-dark">
+            <p>有氧運動可幫助燃燒脂肪，但如果時間過長，不僅會消耗脂肪，連肌肉都會被消耗，反而對減脂不好，一般來說，有氧運動做40分鐘左右就很足夠了。</p>
+          </div>
+        <div class="display-6 text-center text-md-light m-3" ><button class="newbtn color" onclick="window.open('#');"><b>更多有氧程</b></button></div>
+        </div>
+          <div class="col-md-7">
+            <img src="./images/aerobic_banner.png" class="img-fluid">
+          </div>
+        </div>	
+       </div>
+     </section>
+     
+
+    <!-- 瑜珈row --> 
+    <section>
+        <div class="container my-5 bg-danger" >
+         <hr>
+         <div class="row">
+           <div class="col-md-5 order-md-5">
+             <div class="py-5 mb-6">
+                 <h2 class="display-6 text-center">瑜珈系列</h2>
+             </div>
+           <div class="display-6 text-center text-md-dark">
+             <p>瑜伽能增強身體力量和肌體彈性，讓身體四肢均衡發展。 瑜伽能調節全身系統、改善血液循環、促進內分泌平衡、減壓養心、釋放身心, 達到修心養性的目的。</p>
+           </div>
+         <div class="display-6 text-center text-md-light m-3" ><button class="newbtn color" onclick="window.open('yoga.html');"><b>更多瑜珈課程</b></button></div>
+         </div>
+           <div class="col-md-7">
+             <img src="./images/yoga_banner.png" class="img-fluid">
+           </div>
+         </div>	
+        </div>
+      </section>
+          
+       
+    
+     <!-- 增肌row -->
+     <section>
+        <div class="container my-5 bg-danger" >
+         <hr>
+         <div class="row">
+           <div class="col-md-5">
+             <div class="py-5 mb-6">
+                 <h2 class="display-6 text-center">增肌系列</h2>
+             </div>
+           <div class="display-6 text-center text-md-dark">
+             <p>增肌、減脂真的是兩件不同的事情！健身新手大補帖
+                如何調整增肌訓練量？如何增肌？這些是許多人的疑問，而對於增肌效果來講最重要的就是訓練量要穩定增加，所以今天的重點就是要教你怎麼安排課表以穩定提升訓練量來增肌 ...
+             </p>
+           </div>
+         <div class="display-6 text-center text-md-light m-3" ><button class="newbtn color" onclick="window.open('#');"><b>更多增肌課程</b></button></div>
+         </div>
+           <div class="col-md-7">
+             <img src="./images/weight_banner.png" class="img-fluid">
+           </div>
+         </div>	
+        </div>
+      </section>
+      
+    </div>
+<!-- 運動頁熱銷商品推薦 -->
+<section>
+    <div class="container">
+        <div class="row">
+<div class="col-md-12">
+    <h1>熱銷商品推薦</h1>
+</div>
+        </div>
+        
+<!-- 商品列表 -->     
+        
+
+<div class="container">
+  <div class="row">
+    <div class="d-md-flex justify-content  lg-betwee col-md-12"  class="yogalist" >
+        
+<figure class="snip1268">
+<div class="image">
+<img src="./images/7d1e9cdc-6637-40da-b63d-582f025f0fe4_8556760.jpg" alt="sq-sample4"/>
+<div class="icons">
+<a href="#"><i class="ion-star"></i></a>
+<a href="#"> <i class="ion-share"></i></a>
+<a href="#"> <i class="ion-search"></i></a>
+</div>
+<a href="#" class="add-to-cart">Add to Cart</a>
+</div>
+<figcaption>
+<h2>伏地挺身握把 </h2>
+<p></p>
+<div class="price">$65.00 </div>
+</figcaption>
+</figure>
+<figure class="snip1268 hover">
+<div class="image">
+<img src="./images/161a51c7-328b-44b2-81b9-8a7f2edc655f_8600507.jpg" alt="sq-sample17"/>
+<div class="icons">
+<a href="#"><i class="ion-star"></i></a>
+<a href="#"> <i class="ion-share"></i></a>
+<a href="#"> <i class="ion-search"></i></a>
+</div>
+<a href="#" class="add-to-cart">Add to Cart</a>
+</div>
+<figcaption>
+<h2>【男女通用】護肘</h2>
+<p></p>
+<div class="price">$75.00 </div>
+</figcaption>
+</figure>
+<figure class="snip1268">
+<div class="image">
+<img src="./images/74b22f8c-b5eb-43c6-bf78-5b5da9d27c2e_8405383.jpg" alt="sq-sample15"/>
+<div class="icons">
+<a href="#"><i class="ion-star"></i></a>
+<a href="#"> <i class="ion-share"></i></a>
+<a href="#"> <i class="ion-search"></i></a>
+</div>
+<a href="#" class="add-to-cart">Add to Cart</a>
+</div>
+<figcaption>
+<h2>經典瑜珈墊收納袋</h2>
+<p></p>
+<div class="price">$195.00 </div>
+</figcaption>
+</figure>
+    </div>
+</div>
+</div>
+</section>
+</div>
+
+
+
+
+
+
+
+    <!-- 電腦版Footer -->
+    <footer class="footer d-none d-md-block">
+        <div class="container">
+            <div class="row gap justify-content-between">
+
+                <!-- 廢話 -->
+                <div class="footercon1">
+                    <div class="about">
+                        <p>
+                            大疫情時代衝擊著社會，除了健身更需要建心。我們必須學著與
+                            困難共存，找出全新的辦法去鍛鍊，讓自己更快，更高，更強!
+                        </p>
+                    </div>
+
+                </div>
+                <div class="footercon">
+                    <!-- 第一段footer -->
+                    <div class="footercon1 dpk ">
+                        <div class="footerconh2 ">
+                            <h2 class="footerh2">UNI-EASY</h2>
+                        </div>
+
+                        <div class="footercon">
+                            <a href="#">
+                                <p>
+                                    會員專區
+                                </p>
+                            </a>
+                            <a href="#">
+                                <p>
+                                    購物車
+                                </p>
+                            </a>
+                            <a href="#">
+                                <p>
+                                    商品
+                                </p>
+                            </a>
+                            <a href="#">
+                                <p>
+                                    課程
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 第二段footer -->
+                    <div class="footercon2 dpk">
+                        <div class="footerconh2">
+                            <h2 class="footerh2">
+                                關於課程
+                            </h2>
+                        </div>
+
+                        <div class="footercon">
+                            <a href="#">
+                                <p>
+                                    瑜珈課程
+                                </p>
+                            </a>
+                            <a href="#">
+                                <p>
+                                    有氧運動
+                                </p>
+                            </a>
+                            <a href="#">
+                                <p>
+                                    增肌減重
+                                </p>
+                            </a>
+                            <a href="#">
+                                <p>
+                                    其他資訊
+
+                                </p>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+            <div class="copyright">
+                <p class="copyrightText">
+                    <a href="">
+                        Copyright 2003-2021, Decathlon Group or its Affiliates.  隱私權政策
+                    </a>
+                </p>
+            </div>
+
+
+    </footer>
+
+    <!-- 手機板Footer -->
+    <footer class="footerMobile  d-lg-none">
+        <div class="container">
+            <div class="footerconMobile row justify-content-around">
+                <div class="personMobile">
+                    <a href="#">
+                        <img src="/png/outline_person_outline_white_24dp.png" alt="">
+                    </a>
+                </div>
+
+                <div class="homeMobile">
+                    <a href="#">
+                        <img src="/png/outline_home_white_24dp.png" alt="">
+                    </a>
+                </div>
+
+                <div class="shoppingcarMobile">
+                    <a href="#">
+                        <img src="/png/outline_shopping_cart_white_24dp.png" alt="">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <div class="box2 d-lg-none"></div>
+<!-- kenadd -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+
+</html>
