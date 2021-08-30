@@ -8,7 +8,10 @@ display: inline-block;
     gap: 20px;
 }
 
-
+.sg{
+    gap:5px
+    
+}
 
 body{
     color: #000000;
