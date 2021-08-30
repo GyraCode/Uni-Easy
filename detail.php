@@ -16,34 +16,34 @@
 <!-- 放商品詳細資訊的區塊 -->
 <div class="container">
     <div class="col-10 ">
-        <div class="row">
-            <div class="col-5 pt-3 dpk">
+        <div class="row d-flex justify-content-between">
+            <div class="col-xs-12 col-5 pt-3 dpk">
                 <div class="text-center">
+                    <?php
+                    if (isset($_GET['prod_id'])) {
+                        $sql = "SELECT * FROM `products` WHERE `id` = {$_GET['prod_id']}";
+                        $obj = $pdo->query($sql)->fetch();
+                    ?>
+                        <img src="images/<?= $obj['prod_image'] ?>" class="rounded" alt="<?= $obj['prod_name'] ?>" title="<?= $obj['prod_name'] ?>">
+                    <?php
+                    }
+                    ?>
+
+                </div>
                 <?php
                 if (isset($_GET['prod_id'])) {
                     $sql = "SELECT * FROM `products` WHERE `id` = {$_GET['prod_id']}";
                     $obj = $pdo->query($sql)->fetch();
                 ?>
-                    <img src="images/<?= $obj['prod_image'] ?>" class="rounded" alt="<?= $obj['prod_name'] ?>" title="<?= $obj['prod_name'] ?>">
+                    <div class="text-center">
+
+                        <a data-lightbox="roadtrip" href="<?= $objImg['filename'] ?>" style="display: none;">
+                            <img src="images/<?= $objImg['filename'] ?>" class=" figure-img img-fluid rounded float-start m-1" style="width: 100%;" alt="...">
+                        </a>
                     <?php
                 }
-                ?>
-                   
-                </div>
-                <?php
-                if (isset($_GET['prod_id'])) {
-                    $sql = "SELECT * FROM `products` WHERE `id` = {$_GET['prod_id']}";
-                    $obj = $pdo->query($sql)->fetch();
-                ?>
-                <div class="text-center">
-
-                    <a data-lightbox="roadtrip" href="<?= $objImg['filename'] ?>" style="display: none;">
-                        <img src="images/<?= $objImg['filename'] ?>" class=" figure-img img-fluid rounded float-start m-1" style="width: 100%;" alt="...">
-                    </a>
-                <?php
-                }
-                ?>
-                </div>
+                    ?>
+                    </div>
             </div>
         </div>
         <div class="col-7 dpk">

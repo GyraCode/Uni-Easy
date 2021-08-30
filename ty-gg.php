@@ -357,7 +357,7 @@
 
             .ty-p2-drop {
                 display: block;
-                padding-bottom: 1px;
+                padding-bottom: ;
                 background: #FFF;
             }
 
@@ -428,57 +428,7 @@
 </head>
 
 <body>
-    <!-- 電腦版Header -->
-
-    <div class="headerTop d-none d-md-block">
-        <div class="navbg ">
-            <img src="png/navbar_bg_01.png" alt="">
-        </div>
-        <div class="container navbar-adjust">
-            <div class=" row d-flex justify-content-between">
-                <div class="logo">
-                    <a href="#">
-                        <img src="png/logo_35.png" alt="">
-                    </a>
-                </div>
-                <div class="btn">
-                    <button class="btn btn-danger">免費體驗 Free</button>
-                    <button class="btn btn-danger">Login 登入</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- 手機板Header -->
-    <div class="headerMobile d-lg-none">
-
-        <div class="PJmobile">
-            <div class="boxMobile">&nbsp</div>
-            <div class="container">
-
-                <div class="navMobile row justify-content-around">
-
-                    <div class="iconMobile">
-                        <a href="">
-                            <img src="png/outline_menu_black_24dp.png" alt="">
-                        </a>
-                    </div>
-                    <div class="logoMobile">
-                        <a href="">
-                            <img src="png/logo_text.gif" alt="">
-                        </a>
-                    </div>
-                    <div class="srarchMobile">
-                        <a href="">
-                            <img src="png/outline_search_black_24dp.png" alt="">
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php require_once 'tpl/head.inc.php' ?>
     <!-- section 1 -->
     <div class="ty-p1">
         <div class="row">
@@ -541,7 +491,7 @@
                             </p>
                             <div class="a-a">
                                 <a href="shopping_content.php">了解更多</a>
-                                <a href="shopping_list.php?cat_id=3&sub_cat_id=11">前往商品頁</a>
+                                <a href="ty-shopping_list.php?cat_id=3&sub_cat_id=11">前往商品頁</a>
                             </div>
 
                 </div>
@@ -625,132 +575,7 @@
             </div>
         </div>
 
-        <!-- 電腦版Footer -->
-        <footer class="footer d-none d-md-block">
-            <div class="container">
-                <div class="row gap justify-content-between">
-
-                    <!-- 廢話 -->
-                    <div class="footercon1">
-                        <div class="about">
-                            <p>
-                                大疫情時代衝擊著社會，除了健身更需要建心。我們必須學著與
-                                困難共存，找出全新的辦法去鍛鍊，讓自己更快，更高，更強!
-                            </p>
-                        </div>
-
-                    </div>
-                    <div class="footercon">
-                        <!-- 第一段footer -->
-                        <div class="footercon1 dpk ">
-                            <div class="footerconh2 ">
-                                <h2 class="footerh2">UNI-EASY</h2>
-                            </div>
-
-                            <div class="footercon">
-                                <a href="#">
-                                    <p>
-                                        會員專區
-                                    </p>
-                                </a>
-                                <a href="#">
-                                    <p>
-                                        購物車
-                                    </p>
-                                </a>
-                                <a href="#">
-                                    <p>
-                                        商品
-                                    </p>
-                                </a>
-                                <a href="#">
-                                    <p>
-                                        課程
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- 第二段footer -->
-                        <div class="footercon2 dpk">
-                            <div class="footerconh2">
-                                <h2 class="footerh2">
-                                    關於課程
-                                </h2>
-                            </div>
-
-                            <div class="footercon">
-                                <a href="#">
-                                    <p>
-                                        瑜珈課程
-                                    </p>
-                                </a>
-                                <a href="#">
-                                    <p>
-                                        有氧運動
-                                    </p>
-                                </a>
-                                <a href="#">
-                                    <p>
-                                        增肌減重
-                                    </p>
-                                </a>
-                                <a href="#">
-                                    <p>
-                                        其他資訊
-
-                                    </p>
-                                </a>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-
-
-                <div class="copyright">
-                    <p class="copyrightText">
-                        <a href="">
-                            Copyright 2003-2021, Decathlon Group or its Affiliates.  隱私權政策
-                        </a>
-                    </p>
-                </div>
-
-
-        </footer>
-
-        <!-- 手機板Footer -->
-        <footer class="footerMobile  d-lg-none">
-            <div class="container">
-                <div class="footerconMobile row justify-content-around">
-                    <div class="personMobile">
-                        <a href="#">
-                            <img src="png/outline_person_outline_white_24dp.png" alt="">
-                        </a>
-                    </div>
-
-                    <div class="homeMobile">
-                        <a href="#">
-                            <img src="png/outline_home_white_24dp.png" alt="">
-                        </a>
-                    </div>
-
-                    <div class="shoppingcarMobile">
-                        <a href="#">
-                            <img src="png/outline_shopping_cart_white_24dp.png" alt="">
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-        </footer>
-        <div class="box2 d-lg-none"></div>
-
+        <?php require_once 'tpl/foot.inc.php' ?>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>

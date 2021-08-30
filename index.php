@@ -28,7 +28,13 @@
         <div class="PJS1img">
             <img src="./img/dsa.png" alt="">
         </div>
-        <div class="PJclassgo ">
+        <div class="PJclassgo d-none d-md-block">
+            <h1>量身打造個人訓練</h1>
+            <p>在何處都能接受訓練，優良師資以及量身定做的訓練<br>，為裡想身材添點助力!</p>
+            <button class="btn btn-danger">
+                <a href="Exercise-index.php"> 點我進入課程頁面!</a></button>
+        </div>
+        <div class="PJclassgoMobile d-lg-none">
             <h1>量身打造個人訓練</h1>
             <p>在何處都能接受訓練，優良師資以及量身定做的訓練<br>，為裡想身材添點助力!</p>
             <button class="btn btn-danger">
@@ -43,7 +49,7 @@
         <div class="PJS2img">
             <img src="./img/asd.png" alt="">
         </div>
-        <div class="PJshopgo">
+        <div class="PJshopgo d-none d-md-block">
             <h1>頂級裝備強化訓練</h1>
             <p>好的課程搭配頂級裝被輔助你再強化之路<br>更加有感!</p>
             <button class="btn btn-danger">
@@ -51,6 +57,12 @@
                     點我進入商品頁面!
                 </a>
             </button>
+        </div>
+        <div class="PJshopgoMobile d-lg-none">
+            <h1>頂級裝備強化訓練</h1>
+            <p>好的課程搭配頂級裝被輔助你再強化之路<br>，更加有感!</p>
+            <button class="btn btn-danger">
+                <a href="Exercise-index.php"> 點我進入商品頁面!</a></button>
         </div>
     </div>
 </div>

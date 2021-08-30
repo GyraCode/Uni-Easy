@@ -1,6 +1,5 @@
 <?php require_once 'db.inc.php' ?>
 <?php session_start() ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -214,9 +213,10 @@
       margin-left: 900px;
       transform: translateY(-70px);
       width: fit-content;
-      border: 1px solid #000;
+
       padding: 5px 20px;
       border-radius: 15px;
+      background: #000;
 
 
     }
@@ -276,11 +276,10 @@
 
 <body>
   <?php require_once 'tpl/head.inc.php' ?>
-
   <!-- section1 -->
   <div class="container">
     <div class="ty-p1-h row d-flex">
-      <h1>服飾
+      <h1>商品
       </h1>
       <h3>15件商品</h3>
     </div>
@@ -291,13 +290,13 @@
         </button>
 
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <!-- <a class="dropdown-item" href="#">男性服飾</a>
-          <a class="dropdown-item" href="#">女性服飾</a>
-          <a class="dropdown-item" href="#">有氧商品</a>
-          <a class="dropdown-item" href="#">瑜珈商品</a>
-          <a class="dropdown-item" href="#">增肌商品</a>
-          <a class="dropdown-item" href="#">補給商品</a>
-          <a class="dropdown-item" href="#">配件商品</a> -->
+          <a class="dropdown-item" href="#">男性服飾</a>
+          <a class="dropdown-item" href="wmen.php">女性服飾</a>
+          <a class="dropdown-item" href="ty-yoyun.php">有氧商品</a>
+          <a class="dropdown-item" href="ty-yoga.php">瑜珈商品</a>
+          <a class="dropdown-item" href="ty-gg.php">增肌商品</a>
+          <a class="dropdown-item" href="ty-sup.php">補給商品</a>
+          <a class="dropdown-item" href="ty-pei.php">配件商品</a>
 
         </div>
 
@@ -311,8 +310,8 @@
           價格
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="order_by_price dropdown-item" href="#" data-order="ASC">低 - 高</a>
-          <a class="order_by_price dropdown-item" href="#" data-order="DESC">高 - 低</a>
+          <a class="order_by_price dropdown-item" href="ty-shopping_list.php?cat_id=4&sub_cat_id=14&order_by_price=ASC" data-order="ASC">低 - 高</a>
+          <a class="order_by_price dropdown-item" href="ty-shopping_list.php?cat_id=4&sub_cat_id=14&order_by_price=DESC" data-order="DESC">高 - 低</a>
 
         </div>
       </div>
@@ -322,8 +321,8 @@
           排序
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="order_by_time dropdown-item" href="#" data-order="ASC">最舊</a>
-          <a class="order_by_time dropdown-item" href="#" data-order="DESC">最新</a>
+          <a class="order_by_time dropdown-item" href="ty-shopping_list.php?cat_id=4&sub_cat_id=14&order_by_time=ASC" data-order="ASC">最新</a>
+          <a class="order_by_time dropdown-item" href="ty-shopping_list.php?cat_id=4&sub_cat_id=14&order_by_time=DESC" data-order="DESC">最舊</a>
 
         </div>
       </div>
@@ -331,7 +330,7 @@
 
     </div>
     <div class="yt-p1-a">
-      <a href="">聯絡我們</a>
+      <a href="contactus.php">聯絡我們</a>
     </div>
 
 
@@ -360,7 +359,7 @@
     ?>
 
 
-    <div class="container shopcards">
+    <div class="row shopcards">
       <!-- 放次要類別的區塊 -->
       <?php require_once 'tpl/ty-sidebar.php' ?>
 
@@ -370,7 +369,7 @@
         <div class="row">
           <div class="">
             <?php if (isset($_GET['sub_cat_id'])) { ?>
-              <div class="row row-cols-1 row-cols-lg-4 align-items-stretch  g-4 py-2">
+              <div class="imgsss row row-cols-1 row-cols-lg-4 align-items-stretch  g-4 py-2">
                 <?php
                 $sql = "SELECT `id`, `prod_name`, `prod_thumbnail`, `prod_price` 
                         FROM `products` 
@@ -378,13 +377,12 @@
                 if (isset($_GET['order_by_price'])) {
                   $sql .= "ORDER BY `prod_price` {$_GET['order_by_price']} ";
                 } else if (isset($_GET['order_by_time'])) {
-                  $sql .= "ORDER BY `created_at` {$_GET['order_by_time']} ";
+                  $sql .= "ORDER BY `id` {$_GET['order_by_time']} ";
                 }
                 $sql .= " LIMIT {$offset}, {$numPerPage}";
                 $arr = $pdo->query($sql)->fetchAll();
                 foreach ($arr as $obj) {
                 ?>
-
                   <div class="col-12 col-md-4">
                     <div class="card" style="width: 18rem;">
                       <a href="detail.php?cat_id=<?= $_GET['cat_id'] ?>&sub_cat_id=<?= $_GET['sub_cat_id'] ?>&prod_id=<?= $obj['id'] ?>">
@@ -471,17 +469,24 @@
   <?php require_once 'tpl/foot.inc.php' ?>
 
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+  <!-- <script src="js/prettify.js"></script> -->
+  <script src="js/zoomsl.min.js"></script>
+  <!-- <script src="js/main.js"></script> -->
+
+
+
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
   <script>
-    /* Demo purposes only */
-    $(".hover").mouseleave(
-      function() {
-        $(this).removeClass("hover");
-      }
-    );
+    $(".card-img-top").imagezoomsl({
+
+      zoomrange: [3, 3]
+    });
 
     $('a.order_by_price').click(function(event) {
       // preventDefault取消該做的事情

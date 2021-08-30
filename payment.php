@@ -2,13 +2,13 @@
 <?php session_start() ?>
 <link rel="stylesheet" href="css/card.css" type="text/css">
 <style>
-    .check>img{
-  width: 25%;
-}
+    .check>img {
+        width: 25%;
+    }
 </style>
 <?php
 //如果這個階段沒有購物車，就將頁面轉到商品確認頁
-if( !isset($_SESSION['cart']) ){
+if (!isset($_SESSION['cart'])) {
     header("Location: products_confirm.php");
     exit();
 }
@@ -38,9 +38,11 @@ $_SESSION['coupon_code'] = $_POST['coupon_code'];
     <div class="container">
         <div class="row">
             <!-- 信用卡套件 -->
-            <div class="col-6 px-5">
+            <div class="col-xs-12 px-5">
                 <div class="row border-3 border-bottom">
-                    <div class="col-6 justify-content-start"><p class="fs-3 fw-bold">信用卡資訊</p></div>
+                    <div class="col-6 justify-content-start">
+                        <p class="fs-3 fw-bold">信用卡資訊</p>
+                    </div>
                 </div>
                 <div class="cc">
                     <h2>擺渡人銀行</h2>
@@ -48,17 +50,17 @@ $_SESSION['coupon_code'] = $_POST['coupon_code'];
                     <span class="provider amex">American Express</span>
                     <span class="provider visa">Visa</span>
                     <div class="number">
-                            <input type="text" class="card_border" maxlength="4" placeholder="1234" name="card_number_1">
-                            <input type="text" class="card_border" maxlength="4" placeholder="1234" name="card_number_2">
-                            <input type="text" class="card_border" maxlength="4" placeholder="1234" name="card_number_3">
-                            <input type="text" class="card_border" maxlength="4" placeholder="1234" name="card_number_4">
+                        <input type="text" class="card_border" maxlength="4" placeholder="1234" name="card_number_1">
+                        <input type="text" class="card_border" maxlength="4" placeholder="1234" name="card_number_2">
+                        <input type="text" class="card_border" maxlength="4" placeholder="1234" name="card_number_3">
+                        <input type="text" class="card_border" maxlength="4" placeholder="1234" name="card_number_4">
                         <span class="instructions">信用卡卡號</span>
                     </div>
                     <div class="date">
                         <span class="instructions valid">到期年限</span>
                         <input type="text" class="card_border" maxlength="5" placeholder="00/00" name="card_valid_date">
                         <span class="instructions valid">CCV</span>
-                        <input type="text" class="card_border" maxlength="3" placeholder="123" name="card_ccv">  
+                        <input type="text" class="card_border" maxlength="3" placeholder="123" name="card_ccv">
                     </div>
                     <div class="name">
                         <input class="full-name card_border" type="text" maxlength="" placeholder="擺渡人" name="card_holder">
@@ -71,23 +73,25 @@ $_SESSION['coupon_code'] = $_POST['coupon_code'];
             </div>
 
             <!-- 購物明細 -->
-            <div class="col-6 px-5">
+            <div class="col-xs-12 px-5">
                 <div class="row border-3 border-bottom">
-                    <div class="col-6 justify-content-start"><p class="fs-3 fw-bold">購物明細</p></div>
+                    <div class="col-6 justify-content-start">
+                        <p class="fs-3 fw-bold">購物明細</p>
+                    </div>
                 </div>
                 <?php
-                if( isset($_SESSION['cart']) ){
-                    foreach($_SESSION['cart'] as $key => $obj){
+                if (isset($_SESSION['cart'])) {
+                    foreach ($_SESSION['cart'] as $key => $obj) {
                 ?>
-                <div class="row border-bottom py-2">
-                    <div class="col-4">
-                        <img src="images/<?= $obj['prod_thumbnail'] ?>" class="img-thumbnail w-75" alt="...">
-                    </div>
-                    <div class="col-4">
-                        <div class="row"><?= $obj['prod_name'] ?></div>
-                    </div>
-                    <div class="col-4">共 <?= $obj['prod_qty'] ?> 件<br>NT$ <?= $obj['prod_price'] * $obj['prod_qty'] ?></div>
-                </div>
+                        <div class="row border-bottom py-2">
+                            <div class="col-4">
+                                <img src="images/<?= $obj['prod_thumbnail'] ?>" class="img-thumbnail w-75" alt="...">
+                            </div>
+                            <div class="col-4">
+                                <div class="row"><?= $obj['prod_name'] ?></div>
+                            </div>
+                            <div class="col-4">共 <?= $obj['prod_qty'] ?> 件<br>NT$ <?= $obj['prod_price'] * $obj['prod_qty'] ?></div>
+                        </div>
                 <?php
                     }
                 }
@@ -105,4 +109,4 @@ $_SESSION['coupon_code'] = $_POST['coupon_code'];
     </div>
 </form>
 
-<?php require_once 'tpl/foot.inc.php' ?> 
+<?php require_once 'tpl/foot.inc.php' ?>

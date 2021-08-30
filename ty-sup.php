@@ -8,8 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <style>
         /* Icon set - http://ionicons.com */
@@ -205,7 +204,7 @@
             background-color: #000;
         }
 
-        
+
 
         .ty-p2 .long-strip {
             width: 100%;
@@ -266,7 +265,7 @@
         }
 
         .ty-p2-left {
-            
+
             width: fit-content;
             border-radius: 5px;
             border: none;
@@ -274,25 +273,25 @@
             padding: 5px 20px;
         }
 
-        .ty-p2-left .a-a{
+        .ty-p2-left .a-a {
             display: flex;
 
         }
 
-        .ty-p2-left a{
-            color:#fff;
-            font-weight:600;
-            border:1px solid #000;
-            border-radius:5px;
-            width:fit-content;
-            margin-right:50px;
+        .ty-p2-left a {
+            color: #fff;
+            font-weight: 600;
+            border: 1px solid #000;
+            border-radius: 5px;
+            width: fit-content;
+            margin-right: 50px;
             padding: 5px 15px;
-            background:#383D3B;
+            background: #383D3B;
 
         }
 
-        
-        
+
+
 
         .ty-p3-ft {
             display: flex;
@@ -359,15 +358,15 @@
             .ty-p2-drop {
                 display: block;
                 padding-bottom: ;
-                background:#FFF;
+                background: #FFF;
             }
 
             .ty-p2-drop button {
                 color: #000;
-                margin:auto 0;
-                font-weight:700;
+                margin: auto 0;
+                font-weight: 700;
 
-        }   
+            }
 
             .ty-p2-drop .dropdown-menu a {
                 display: block;
@@ -390,17 +389,17 @@
                 margin-top: 15px;
             }
 
-            .ty-p2-left .a-a{
+            .ty-p2-left .a-a {
                 display: flex;
-                transform:translateX(20px);
+                transform: translateX(20px);
             }
 
             .ty-p2-btn {
                 padding: 5px 10px;
             }
 
-            .ty-p2-right{
-                margin-top:30px;
+            .ty-p2-right {
+                margin-top: 30px;
             }
 
             .ty-p2-right .bg1 {
@@ -429,57 +428,7 @@
 </head>
 
 <body>
-    <!-- 電腦版Header -->
 
-    <div class="headerTop d-none d-md-block">
-        <div class="navbg ">
-            <img src="png/navbar_bg_01.png" alt="">
-        </div>
-        <div class="container navbar-adjust">
-            <div class=" row d-flex justify-content-between">
-                <div class="logo">
-                    <a href="#">
-                        <img src="png/logo_35.png" alt="">
-                    </a>
-                </div>
-                <div class="btn">
-                    <button class="btn btn-danger">免費體驗 Free</button>
-                    <button class="btn btn-danger">Login 登入</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- 手機板Header -->
-    <div class="headerMobile d-lg-none">
-
-        <div class="PJmobile">
-            <div class="boxMobile">&nbsp</div>
-            <div class="container">
-
-                <div class="navMobile row justify-content-around">
-
-                    <div class="iconMobile">
-                        <a href="">
-                            <img src="png/outline_menu_black_24dp.png" alt="">
-                        </a>
-                    </div>
-                    <div class="logoMobile">
-                        <a href="">
-                            <img src="png/logo_text.gif" alt="">
-                        </a>
-                    </div>
-                    <div class="srarchMobile">
-                        <a href="">
-                            <img src="png/outline_search_black_24dp.png" alt="">
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- section 1 -->
     <div class="ty-p1">
         <div class="row">
@@ -496,11 +445,11 @@
             <h2>PRODUCT DESCIPTION</h2>
         </div>
     </div>
-
+    <?php require_once 'tpl/head.inc.php' ?>
     <!-- section 2 -->
     <div class="ty-p2">
         <div class="long-strip">
-        <a href="ty-men.php">男性服飾</a>
+            <a href="ty-men.php">男性服飾</a>
             <a href="ty-wmen.php">女性服飾</a>
             <a href="ty-yoyun.php">有氧商品</a>
             <a href="ty-yoga.php">瑜珈商品</a>
@@ -508,12 +457,11 @@
             <a href="ty-sup.php">補給商品</a>
             <a href="ty-pei.php">配件商品</a>
             <div class="ty-p2-drop dropdown">
-                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     系列選擇
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="ty-men.php">男性服飾</a>
+                    <a class="dropdown-item" href="ty-men.php">男性服飾</a>
                     <a class="dropdown-item" href="ty-wmen.php">女性服飾</a>
                     <a class="dropdown-item" href="ty-yoyun.php">有氧商品</a>
                     <a class="dropdown-item" href="ty-yoga.php">瑜珈商品</a>
@@ -532,17 +480,17 @@
                     <h2>Supply goods</h2>
                     <p>高蛋白粉跟高蛋白質食物各有好處，就主要營養素來講兩者是沒什麼差的，像是一塊雞肉、一份豬肝、一份瘦的牛肉，跟一份高蛋白粉大概都是20-30克蛋白質。
 
-差別就在於說真正的食物中有許多的微量營養素(維生素、礦物質)，而高蛋白粉就是加工食品，裡面除了高蛋白質以外沒什麼其他的微量營養素。就算有些高蛋白粉會加一些有的沒的微量元素，要比營養的話一定是真正的食物會贏。
+                        差別就在於說真正的食物中有許多的微量營養素(維生素、礦物質)，而高蛋白粉就是加工食品，裡面除了高蛋白質以外沒什麼其他的微量營養素。就算有些高蛋白粉會加一些有的沒的微量元素，要比營養的話一定是真正的食物會贏。
 
-但高蛋白粉的優勢是，很方便、很便宜、很快吸收、很升胰島素。<br>
+                        但高蛋白粉的優勢是，很方便、很便宜、很快吸收、很升胰島素。<br>
 
-特定的蛋白粉，像是濃縮乳清蛋白粉還有分離式蛋白粉，讓身體吸收很快、分泌較多胰島素，可以更快的把養分送進細胞中。
+                        特定的蛋白粉，像是濃縮乳清蛋白粉還有分離式蛋白粉，讓身體吸收很快、分泌較多胰島素，可以更快的把養分送進細胞中。
 
-高蛋白粉的缺點剛剛也說過了，就是缺少了真的食物含有的營養價值，較沒有飽足感。
+                        高蛋白粉的缺點剛剛也說過了，就是缺少了真的食物含有的營養價值，較沒有飽足感。
                     </p>
                     <div class="a-a">
-                    <a href="shopping_content.php">了解更多</a>
-                    <a href="shopping_list.php?cat_id=2&sub_cat_id=9">前往商品頁</a>
+                        <a href="shopping_content.php">了解更多</a>
+                        <a href="ty-shopping_list.php?cat_id=2&sub_cat_id=9">前往商品頁</a>
                     </div>
 
                 </div>
@@ -579,7 +527,7 @@
 
                         <figcaption>
                             <h2>[英國 Myprotein] 濃縮乳清蛋白(2.5kg/包) 奶茶</h2>
-                            
+
                             <div class="price">$1450 </div>
                         </figcaption>
                     </figure>
@@ -597,7 +545,7 @@
 
                         <figcaption>
                             <h2>[英國 Myprotein] 濃縮乳清蛋白(2.5kg/包) 藍莓起司蛋糕</h2>
-                            
+
                             <div class="price">$1450</div>
                         </figcaption>
 
@@ -616,7 +564,7 @@
 
                         <figcaption>
                             <h2>[英國 Myprotein] 濃縮乳清蛋白(2.5kg/包) 巧克力布朗尼</h2>
-                            
+
                             <div class="price">$1450 </div>
                         </figcaption>
 
@@ -625,149 +573,17 @@
                 </div>
             </div>
         </div>
-
-        <!-- 電腦版Footer -->
-        <footer class="footer d-none d-md-block">
-            <div class="container">
-                <div class="row gap justify-content-between">
-
-                    <!-- 廢話 -->
-                    <div class="footercon1">
-                        <div class="about">
-                            <p>
-                                大疫情時代衝擊著社會，除了健身更需要建心。我們必須學著與
-                                困難共存，找出全新的辦法去鍛鍊，讓自己更快，更高，更強!
-                            </p>
-                        </div>
-
-                    </div>
-                    <div class="footercon">
-                        <!-- 第一段footer -->
-                        <div class="footercon1 dpk ">
-                            <div class="footerconh2 ">
-                                <h2 class="footerh2">UNI-EASY</h2>
-                            </div>
-
-                            <div class="footercon">
-                                <a href="#">
-                                    <p>
-                                        會員專區
-                                    </p>
-                                </a>
-                                <a href="#">
-                                    <p>
-                                        購物車
-                                    </p>
-                                </a>
-                                <a href="#">
-                                    <p>
-                                        商品
-                                    </p>
-                                </a>
-                                <a href="#">
-                                    <p>
-                                        課程
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- 第二段footer -->
-                        <div class="footercon2 dpk">
-                            <div class="footerconh2">
-                                <h2 class="footerh2">
-                                    關於課程
-                                </h2>
-                            </div>
-
-                            <div class="footercon">
-                                <a href="#">
-                                    <p>
-                                        瑜珈課程
-                                    </p>
-                                </a>
-                                <a href="#">
-                                    <p>
-                                        有氧運動
-                                    </p>
-                                </a>
-                                <a href="#">
-                                    <p>
-                                        增肌減重
-                                    </p>
-                                </a>
-                                <a href="#">
-                                    <p>
-                                        其他資訊
-
-                                    </p>
-                                </a>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-
-
-                <div class="copyright">
-                    <p class="copyrightText">
-                        <a href="">
-                            Copyright 2003-2021, Decathlon Group or its Affiliates.  隱私權政策
-                        </a>
-                    </p>
-                </div>
-
-
-        </footer>
-
-        <!-- 手機板Footer -->
-        <footer class="footerMobile  d-lg-none">
-            <div class="container">
-                <div class="footerconMobile row justify-content-around">
-                    <div class="personMobile">
-                        <a href="#">
-                            <img src="png/outline_person_outline_white_24dp.png" alt="">
-                        </a>
-                    </div>
-
-                    <div class="homeMobile">
-                        <a href="#">
-                            <img src="png/outline_home_white_24dp.png" alt="">
-                        </a>
-                    </div>
-
-                    <div class="shoppingcarMobile">
-                        <a href="#">
-                            <img src="png/outline_shopping_cart_white_24dp.png" alt="">
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-        </footer>
-        <div class="box2 d-lg-none"></div>
-
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-            crossorigin="anonymous"></script>
+        <?php require_once 'tpl/foot.inc.php' ?>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
 
 
         <script>
             /* Demo purposes only */
             $(".hover").mouseleave(
-                function () {
+                function() {
                     $(this).removeClass("hover");
                 }
             );

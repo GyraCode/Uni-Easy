@@ -8,7 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <style>
         /* Icon set - http://ionicons.com */
@@ -204,7 +205,7 @@
             background-color: #000;
         }
 
-
+        
 
         .ty-p2 .long-strip {
             width: 100%;
@@ -265,7 +266,7 @@
         }
 
         .ty-p2-left {
-
+            
             width: fit-content;
             border-radius: 5px;
             border: none;
@@ -273,25 +274,25 @@
             padding: 5px 20px;
         }
 
-        .ty-p2-left .a-a {
+        .ty-p2-left .a-a{
             display: flex;
 
         }
 
-        .ty-p2-left a {
-            color: #fff;
-            font-weight: 600;
-            border: 1px solid #000;
-            border-radius: 5px;
-            width: fit-content;
-            margin-right: 50px;
+        .ty-p2-left a{
+            color:#fff;
+            font-weight:600;
+            border:1px solid #000;
+            border-radius:5px;
+            width:fit-content;
+            margin-right:50px;
             padding: 5px 15px;
-            background: #383D3B;
+            background:#383D3B;
 
         }
 
-
-
+        
+        
 
         .ty-p3-ft {
             display: flex;
@@ -358,15 +359,15 @@
             .ty-p2-drop {
                 display: block;
                 padding-bottom: ;
-                background: #FFF;
+                background:#FFF;
             }
 
             .ty-p2-drop button {
                 color: #000;
-                margin: auto 0;
-                font-weight: 700;
+                margin:auto 0;
+                font-weight:700;
 
-            }
+        }   
 
             .ty-p2-drop .dropdown-menu a {
                 display: block;
@@ -389,17 +390,17 @@
                 margin-top: 15px;
             }
 
-            .ty-p2-left .a-a {
+            .ty-p2-left .a-a{
                 display: flex;
-                transform: translateX(20px);
+                transform:translateX(20px);
             }
 
             .ty-p2-btn {
                 padding: 5px 10px;
             }
 
-            .ty-p2-right {
-                margin-top: 30px;
+            .ty-p2-right{
+                margin-top:30px;
             }
 
             .ty-p2-right .bg1 {
@@ -428,7 +429,57 @@
 </head>
 
 <body>
+    <!-- 電腦版Header -->
 
+    <div class="headerTop d-none d-md-block">
+        <div class="navbg ">
+            <img src="png/navbar_bg_01.png" alt="">
+        </div>
+        <div class="container navbar-adjust">
+            <div class=" row d-flex justify-content-between">
+                <div class="logo">
+                    <a href="#">
+                        <img src="png/logo_35.png" alt="">
+                    </a>
+                </div>
+                <div class="btn">
+                    <button class="btn btn-danger">免費體驗 Free</button>
+                    <button class="btn btn-danger">Login 登入</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 手機板Header -->
+    <div class="headerMobile d-lg-none">
+
+        <div class="PJmobile">
+            <div class="boxMobile">&nbsp</div>
+            <div class="container">
+
+                <div class="navMobile row justify-content-around">
+
+                    <div class="iconMobile">
+                        <a href="">
+                            <img src="png/outline_menu_black_24dp.png" alt="">
+                        </a>
+                    </div>
+                    <div class="logoMobile">
+                        <a href="">
+                            <img src="png/logo_text.gif" alt="">
+                        </a>
+                    </div>
+                    <div class="srarchMobile">
+                        <a href="">
+                            <img src="png/outline_search_black_24dp.png" alt="">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- section 1 -->
     <div class="ty-p1">
         <div class="row">
@@ -449,7 +500,7 @@
     <!-- section 2 -->
     <div class="ty-p2">
         <div class="long-strip">
-            <a href="ty-men.php">男性服飾</a>
+        <a href="ty-men.php">男性服飾</a>
             <a href="ty-wmen.php">女性服飾</a>
             <a href="ty-yoyun.php">有氧商品</a>
             <a href="ty-yoga.php">瑜珈商品</a>
@@ -457,11 +508,12 @@
             <a href="ty-sup.php">補給商品</a>
             <a href="ty-pei.php">配件商品</a>
             <div class="ty-p2-drop dropdown">
-                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
                     系列選擇
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="ty-men.php">男性服飾</a>
+                <a class="dropdown-item" href="ty-men.php">男性服飾</a>
                     <a class="dropdown-item" href="ty-wmen.php">女性服飾</a>
                     <a class="dropdown-item" href="ty-yoyun.php">有氧商品</a>
                     <a class="dropdown-item" href="ty-yoga.php">瑜珈商品</a>
@@ -486,8 +538,8 @@
                         以上是對於有氧運動比較理論式的解說。
                     </p>
                     <div class="a-a">
-                        <a href="shopping_content.php">了解更多</a>
-                        <a href="shopping_list.php?cat_id=3&sub_cat_id=12">前往商品頁</a>
+                    <a href="shopping_content.php">了解更多</a>
+                    <a href="shopping_list.php?cat_id=3&sub_cat_id=12">前往商品頁</a>
                     </div>
 
                 </div>
@@ -541,7 +593,7 @@
 
                         <figcaption>
                             <h2>PTP 阻力訓練 彈力繩PTP 阻力訓練 彈力繩 L3 (7.5公斤)</h2>
-
+                            
                             <div class="price">$367</div>
                         </figcaption>
 
@@ -560,7 +612,7 @@
 
                         <figcaption>
                             <h2>JIAGO 健身瑜珈滑行盤黑色</h2>
-
+                            
                             <div class="price">$299 </div>
                         </figcaption>
 
@@ -696,16 +748,22 @@
         </footer>
         <div class="box2 d-lg-none"></div>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
 
 
 
         <script>
             /* Demo purposes only */
             $(".hover").mouseleave(
-                function() {
+                function () {
                     $(this).removeClass("hover");
                 }
             );
