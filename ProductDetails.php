@@ -1,4 +1,5 @@
-<link rel="stylesheet" href="./css/YD_main.css">
+<link rel="stylesheet" href=".YD_main.css">
+<link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
 <?php require_once 'tpl/head.inc.php' ?>
 <?php require_once 'db.inc.php' ?>
 <?php session_start() ?>

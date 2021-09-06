@@ -62,7 +62,7 @@
             <h1>頂級裝備強化訓練</h1>
             <p>好的課程搭配頂級裝被輔助你再強化之路<br>，更加有感!</p>
             <button class="btn btn-danger">
-                <a href="Exercise-index.php"> 點我進入商品頁面!</a></button>
+                <a href="ty-wmen.php"> 點我進入商品頁面!</a></button>
         </div>
     </div>
 </div>

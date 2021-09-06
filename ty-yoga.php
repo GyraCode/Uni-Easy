@@ -538,7 +538,7 @@
                     </p>
                     <div class="a-a">
                     <a href="shopping_content.php">了解更多</a>
-                    <a href="shopping_list.php?cat_id=3&sub_cat_id=10">前往商品頁</a>
+                    <a href="ty-shopping_list.php?cat_id=3&sub_cat_id=10">前往商品頁</a>
                     </div>
 
                 </div>

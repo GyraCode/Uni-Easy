@@ -16,11 +16,12 @@ display: inline-block;
 
 .check>img{
   width: 20%;
-
+ 
 }
 
-
-
+.fa{
+  width: 15px;
+}
 /* --------字大小-------- */
         h1{
             font-size: 2.5em;
@@ -72,6 +73,9 @@ display: inline-block;
         }
         .btn{
             margin-top: 10px;
+        }
+        .btn1{
+          margin: 0px 5px;
         }
 
 /* --------HeaderMobile-------- */

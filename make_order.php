@@ -1,20 +1,28 @@
 <?php require_once 'db.inc.php' ?>
 <?php session_start() ?>
 <style>
-    .check>img{
-  width: 25%;
-}
+    .check>img {
+        width: 25%;
+    }
+
+    .checkmobile>img {
+        width: 70%;
+    }
+
+    .finish>img {
+        width: 100%;
+    }
 </style>
 <?php
 //如果這個階段沒有購物車，就將頁面轉到商品確認頁
-if( !isset($_SESSION['cart']) ){
+if (!isset($_SESSION['cart'])) {
     header("Location: products_confirm.php");
     exit();
 }
 
 //計算總價
 $total = 0;
-foreach($_SESSION['cart'] as $key => $obj){
+foreach ($_SESSION['cart'] as $key => $obj) {
     $total += $obj['prod_price'] * $obj['prod_qty'];
 }
 
@@ -43,7 +51,7 @@ $stmt = $pdo->query($sql);
  * 建立訂單編號後，透過剛才新增的自動編號，
  * 來更新訂單資料表的訂單編號。
  */
-if($stmt->rowCount() > 0){
+if ($stmt->rowCount() > 0) {
     //取得新增資料時的自動編號
     $lastInsertId = $pdo->lastInsertId();
 
@@ -57,14 +65,13 @@ if($stmt->rowCount() > 0){
     $pdo->query($sqlUpdate);
 
     //處理商品明細資訊
-    foreach($_SESSION['cart'] as $key => $obj){
+    foreach ($_SESSION['cart'] as $key => $obj) {
         //計算小計
         $subtotal = $obj['prod_price'] * $obj['prod_qty'];
 
         //新增商品名細
         $sqlDetail = "INSERT INTO `orders_detail` (`order_id`, `prod_id`, `prod_name`, `prod_price`, `prod_color`, `prod_qty`, `prod_subtotal`) 
                     VALUES ('{$order_id}', {$obj['prod_id']}, '{$obj['prod_name']}', {$obj['prod_price']}, {$obj['prod_qty']}, {$subtotal})";
-        $pdo->query($sqlDetail);
     }
 
     //刪除購物車
@@ -73,8 +80,23 @@ if($stmt->rowCount() > 0){
 ?>
 <?php require_once 'tpl/head.inc.php' ?>
 
-<div class="text-center py-5 check">
+<div class="text-center py-5 checkmobile d-lg-none">
     <img src="./png/step-4.png" alt="">
 </div>
 
-<?php require_once 'tpl/foot.inc.php' ?> 
+<div class="text-center py-5 check d-none d-md-block">
+    <img src="./png/step-4.png" alt="">
+</div>
+
+<div class="container mobile d-none d-md-block text-center">
+    <img src="./png/checkout.png" alt="">
+</div>
+
+
+<div class="container col-xs-12  d-lg-none text-center">
+    <div class="finish">
+        <img src="./png/checkout.png" alt="">
+    </div>
+</div>
+
+<?php require_once 'tpl/foot.inc.php' ?>

@@ -316,3 +316,26 @@ $('button#btn_register').click(function (event) {
     }, 'json');
 });
 
+$('input#member_info').on("click", function () {
+    $.get("setuser.php", function ($obj) {
+        if ($('input#member_info').prop('checked')) {
+            $('input#quick_e').val($obj['email']);
+            $('input#quick_n').val($obj['name']);
+            $('input#quick_p').val($obj['phone']);
+            $('input#quick_a').val($obj['address']);
+            // $('input#quick_a').addClass("border border-danger border-2");
+
+        } else {
+            $('input#quick_e').val('');
+            $('input#quick_n').val('');
+            $('input#quick_p').val('');
+            $('input#quick_a').val('');
+
+        }
+        // alert("Data Loaded: " + JSON.stringify($obj));
+
+        // $('input#jenemail').addClass("border border-danger border-2");
+    });
+
+});
+

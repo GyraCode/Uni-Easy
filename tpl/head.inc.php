@@ -79,7 +79,8 @@
                         </a>
                     </div>
                     <div class="logoMobile">
-                        <a href="">
+
+                    <a href="index.php">
                             <img src="./png/logo_text.gif" alt="">
                         </a>
                     </div>

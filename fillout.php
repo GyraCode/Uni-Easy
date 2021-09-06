@@ -1,9 +1,13 @@
 <?php require_once 'db.inc.php' ?>
 <?php session_start() ?>
 <style>
-    .check>img{
-  width: 25%;
-}
+    .check>img {
+        width: 25%;
+    }
+
+    .checkmobile>img {
+        width: 70%;
+    }
 </style>
 <?php
 //如果這個階段沒有購物車，就將頁面轉到商品確認頁
@@ -21,7 +25,11 @@ if (isset($_POST['index']) && isset($_POST['qty'])) {
 ?>
 <?php require_once 'tpl/head.inc.php' ?>
 
-<div class="text-center py-5 check">
+<div class="text-center py-5 checkmobile d-lg-none">
+    <img src="./png/step-2.png" alt="">
+</div>
+
+<div class="text-center py-5 check d-none d-md-block">
     <img src="./png/step-2.png" alt="">
 </div>
 
@@ -29,13 +37,13 @@ if (isset($_POST['index']) && isset($_POST['qty'])) {
     <div class="container">
         <div class="row">
             <!-- 運送資訊、收件資訊、發票明細、優惠選擇 -->
-            <div class="col-6 px-5">
+            <div class="col-xs-12 col-lg-10 px-5">
                 <!-- 運送資訊 -->
-                <div class="row border-3 border-bottom">
-                    <div class="col-6 justify-content-start">
+                <div class="row border-3 border-bottom justify-content-between">
+                    <div class="col-xs-12 ">
                         <p class="fs-3 fw-bold">運送資訊</p>
                     </div>
-                    <div class="col-6 d-flex align-items-center justify-content-end">
+                    <div class="col-xs-12 d-flex align-items-center ">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="transport_area" value="臺灣本島" checked>
                             <label class="form-check-label">臺灣本島</label>
@@ -46,8 +54,8 @@ if (isset($_POST['index']) && isset($_POST['qty'])) {
                         </div>
                     </div>
                 </div>
-                <div class="row my-2">
-                    <label for="colFormLabel" class="col-sm-2 col-form-label">運送方式</label>
+                <div class="row my-2 ">
+                    <label for="colFormLabel" class=" col-sm-2 col-form-label">運送方式</label>
                     <div class="col-sm-10">
                         <select class="form-control" name="transport_type">
                             <option value="超商取貨">-- 請選擇 --</option>
@@ -80,12 +88,12 @@ if (isset($_POST['index']) && isset($_POST['qty'])) {
                 </div>
 
                 <!-- 收件資訊 -->
-                <div class="row border-3 border-bottom">
-                    <div class="col-6 justify-content-start">
+                <div class="row border-3 border-bottom justify-content-between">
+                    <div class="col-xs-12 ">
                         <p class="fs-3 fw-bold">運送資訊</p>
                     </div>
                     <div class="col-6 d-flex align-items-center justify-content-end">
-                        <div class="form-check form-check-inline">
+                        <div class="form-check form-check-inline ">
                             <input class="form-check-input" type="checkbox" id="member_info">
                             <label class="form-check-label">填入會員資料</label>
                         </div>
@@ -124,10 +132,10 @@ if (isset($_POST['index']) && isset($_POST['qty'])) {
 
                 <!-- 發票明細 -->
                 <div class="row border-3 border-bottom">
-                    <div class="col-6 justify-content-start">
+                    <div class="col-sm-6 justify-content-start">
                         <p class="fs-3 fw-bold">發票明細</p>
                     </div>
-                    <div class="col-6 d-flex align-items-center justify-content-end">
+                    <div class="col-sm-6 d-flex align-items-center justify-content-end">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="invoice_type" value="電子發票" checked>
                             <label class="form-check-label">電子發票</label>
@@ -140,11 +148,11 @@ if (isset($_POST['index']) && isset($_POST['qty'])) {
                 </div>
                 <div class="row my-2">
                     <div class="col-12 d-flex align-items-center justify-content-start">
-                        <div class="form-check form-check-inline">
+                        <div class="form-check form-check-inline col-sm-6">
                             <input class="form-check-input" type="radio" name="invoice_carrier" value="隨包裹" checked>
                             <label class="form-check-label">隨包裹</label>
                         </div>
-                        <div class="form-check form-check-inline">
+                        <div class="form-check form-check-inline col-sm-6">
                             <input class="form-check-input" type="radio" name="invoice_carrier" value="電子條碼載具">
                             <label class="form-check-label">電子條碼載具</label>
                         </div>
@@ -177,7 +185,7 @@ if (isset($_POST['index']) && isset($_POST['qty'])) {
 
 
             <!-- 購物明細 -->
-            <div class="col-6 px-5">
+            <div class="col-xs-12 px-5">
                 <div class="row border-3 border-bottom">
                     <div class="col-6 justify-content-start">
                         <p class="fs-3 fw-bold">購物明細</p>
@@ -193,7 +201,7 @@ if (isset($_POST['index']) && isset($_POST['qty'])) {
                             </div>
                             <div class="col-4">
                                 <div class="row"><?= $obj['prod_name'] ?></div>
-                                
+
                             </div>
                             <div class="col-4">共 <?= $obj['prod_qty'] ?> 件<br>NT$ <?= $obj['prod_price'] * $obj['prod_qty'] ?></div>
                         </div>
@@ -204,15 +212,13 @@ if (isset($_POST['index']) && isset($_POST['qty'])) {
             </div>
         </div>
 
-        <div class="row mb-3">
-            <div class="col-10"></div>
-            <div class="col-auto">
-                <a class="btn btn-dark" href="products_confirm.php">回上一頁</a>
-                <button type="submit" class="btn btn-danger">下一步</button>
-            </div>
+
+        <div class="col-auto text-right">
+            <a class="btn btn-dark" href="products_confirm.php">回上一頁</a>
+            <button type="submit" class="btn btn-danger">下一步</button>
         </div>
 
     </div>
 </form>
-
+<script src="js/custom.js"></script>
 <?php require_once 'tpl/foot.inc.php' ?>

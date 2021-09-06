@@ -1,10 +1,15 @@
 <?php require_once 'db.inc.php' ?>
 <?php session_start() ?>
-<link rel="stylesheet" href="css/card.css" type="text/css">
+<!-- <link rel="stylesheet" href="css/card.css" type="text/css"> -->
 <style>
-    .check>img {
-        width: 25%;
-    }
+   
+.check>img{
+  width: 25%;
+}
+.checkmobile>img{
+    width: 70%;
+}
+    
 </style>
 <?php
 //如果這個階段沒有購物車，就將頁面轉到商品確認頁
@@ -30,40 +35,43 @@ $_SESSION['coupon_code'] = $_POST['coupon_code'];
 ?>
 <?php require_once 'tpl/head.inc.php' ?>
 
-<div class="text-center py-5 check">
+<div class="text-center py-5 checkmobile d-lg-none">
+    <img src="./png/step-3.png" alt="">
+</div>
+
+<div class="text-center py-5 check d-none d-md-block">
     <img src="./png/step-3.png" alt="">
 </div>
 
 <form name="myForm" method="post" action="make_order.php">
     <div class="container">
-        <div class="row">
+        <div class="row col-12 col-xs-6 col-lg-12">
             <!-- 信用卡套件 -->
-            <div class="col-xs-12 px-5">
+            <div class="col-lg-6 col-xs-12">
                 <div class="row border-3 border-bottom">
-                    <div class="col-6 justify-content-start">
-                        <p class="fs-3 fw-bold">信用卡資訊</p>
-                    </div>
+                    <div class="col-6 justify-content-start"><p class="fs-3 fw-bold asd">信用卡資訊</p></div>
                 </div>
                 <div class="cc">
-                    <h2>擺渡人銀行</h2>
+                    <h2>自己來銀行</h2>
                     <span class="provider mastercard">MasterCard</span>
                     <span class="provider amex">American Express</span>
                     <span class="provider visa">Visa</span>
                     <div class="number">
-                        <input type="text" class="card_border" maxlength="4" placeholder="1234" name="card_number_1">
-                        <input type="text" class="card_border" maxlength="4" placeholder="1234" name="card_number_2">
-                        <input type="text" class="card_border" maxlength="4" placeholder="1234" name="card_number_3">
-                        <input type="text" class="card_border" maxlength="4" placeholder="1234" name="card_number_4">
-                        <span class="instructions">信用卡卡號</span>
+                            <span class="instructions">信用卡卡號</span>
+                            <input type="text" class="card_border" maxlength="4" placeholder="1234" name="card_number_1">
+                            <input type="text" class="card_border" maxlength="4" placeholder="1234" name="card_number_2">
+                            <input type="text" class="card_border" maxlength="4" placeholder="1234" name="card_number_3">
+                            <input type="text" class="card_border" maxlength="4" placeholder="1234" name="card_number_4">
+                        
                     </div>
                     <div class="date">
                         <span class="instructions valid">到期年限</span>
                         <input type="text" class="card_border" maxlength="5" placeholder="00/00" name="card_valid_date">
                         <span class="instructions valid">CCV</span>
-                        <input type="text" class="card_border" maxlength="3" placeholder="123" name="card_ccv">
+                        <input type="text" class="card_border" maxlength="3" placeholder="123" name="card_ccv">  
                     </div>
                     <div class="name">
-                        <input class="full-name card_border" type="text" maxlength="" placeholder="擺渡人" name="card_holder">
+                        <input class="full-name card_border" type="text" maxlength="" placeholder="柏哥" name="card_holder">
                         <span class="instructions">持卡人姓名</span>
                     </div>
                     <div class="shine"></div>
@@ -71,9 +79,8 @@ $_SESSION['coupon_code'] = $_POST['coupon_code'];
                 </div>
 
             </div>
-
             <!-- 購物明細 -->
-            <div class="col-xs-12 px-5">
+            <div class="col-xs-12 col-lg-6 px-5">
                 <div class="row border-3 border-bottom">
                     <div class="col-6 justify-content-start">
                         <p class="fs-3 fw-bold">購物明細</p>
@@ -102,8 +109,8 @@ $_SESSION['coupon_code'] = $_POST['coupon_code'];
         <div class="row my-3">
             <div class="col-10"></div>
             <div class="col-auto">
-                <a class="btn btn-outline-dark" href="fillout.php">回上一頁</a>
-                <button type="submit" class="btn btn-primary">確認付款</button>
+                <a class="btn btn-dark" href="fillout.php">回上一頁</a>
+                <button type="submit" class="btn btn-danger">確認付款</button>
             </div>
         </div>
     </div>
